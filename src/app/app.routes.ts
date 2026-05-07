@@ -3,6 +3,7 @@ import { DataBinding } from './modules/data-binding/data-binding';
 import { ClassStyleBinding } from './modules/class-style-binding/class-style-binding';
 import { EventBinding } from './modules/event-binding/event-binding';
 import { TwoWayDataBinding } from './modules/two-way-data-binding/two-way-data-binding';
+import { InputOutputProperties } from './modules/input-property/input-property';
 
 export const routes: Routes = [
   { path: '', component: DataBinding },
@@ -10,4 +11,5 @@ export const routes: Routes = [
   { path: 'class-style-binding', component: ClassStyleBinding },
   { path: 'event-binding', component: EventBinding },
   { path: 'two-way-data-binding', component: TwoWayDataBinding },
+  { path: 'input-property', component: InputOutputProperties },
 ];

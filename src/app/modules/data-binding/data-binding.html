@@ -1,4 +1,4 @@
-<section class="property-binding">
+<!-- <section class="property-binding">
     <article>
         <h3>Interpolation / Interpolação</h3>
         <p>String renderizada com interpolação {{ url }}</p>
@@ -12,6 +12,21 @@
         <h3>Property Binding</h3>
         <img src="{{ imageUrl }}"><br>
         <img [src]="imageUrl">
-        <img bind-src="imageUrl"> <!-- // bind- é o que o property bindg faz por baixo dos panos -->
+        <img bind-src="imageUrl"> // bind- é o que o property bindg faz por baixo dos panos 
+    </article>
+</section> -->
+
+<section class="input-property">
+    <article>
+        <h3>Input/Output Property</h3>
+
+        <app-input-property [nome]="nomeDoCurso">
+        </app-input-property>
+
+        <contador 
+            [valor]="valorInicial"
+            (mudouValor)="onMudouValor($event)"
+        >
+        </contador>
     </article>
 </section>
