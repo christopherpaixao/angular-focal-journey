@@ -4,10 +4,10 @@ import { ClassStyleBinding } from './modules/class-style-binding/class-style-bin
 import { EventBinding } from './modules/event-binding/event-binding';
 import { TwoWayDataBinding } from './modules/two-way-data-binding/two-way-data-binding';
 import { InputOutputProperties } from './modules/input-property/input-property';
-import { ChangeDetection } from './modules/modern-angular-21/change-detection/change-detection/change-detection';
+import { StateManagement } from './modules/modern-angular-21/state-management/state-management';
 
 export const routes: Routes = [
-  { path: '', component: ChangeDetection },
+  { path: '', component: StateManagement },
   { path: 'data-binding', component: DataBinding },
   { path: 'class-style-binding', component: ClassStyleBinding },
   { path: 'event-binding', component: EventBinding },
