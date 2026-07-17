@@ -1,17 +1,21 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-change-detection',
   standalone: true,
-  imports: [],
+  imports: [AsyncPipe],
   templateUrl: './change-detection.html',
   styleUrl: './change-detection.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush, // ChangeDetectionStrategy.OnPush
 })
 export class ChangeDetection {
-  counter = 0;
+  // counter = 0;
 
-  readonly changeDetector = inject(ChangeDetectorRef);
+  readonly counter$ = interval(1000);
+
+  // readonly changeDetector = inject(ChangeDetectorRef);
 
   /* chamar um evento angular é uma maneira de forçar a DETECTÇÃO DE ALTERAÇÕES 
   a ocorrer quando estamos usando changeDetection OnPush, mas nesse caso,
@@ -23,14 +27,13 @@ export class ChangeDetection {
   se há alterações nas expressões que os modelos estão vinculados eatualiza a view */
 
   constructor() {
-    setInterval(() => {
+    /* setInterval(() => {
       this.counter++;
       console.log('Counter updated:', this.counter);
-    }, 1000);
-
+    }, 1000); */
     /* Podemos chamar manualmente a detecção de alterações com o ChangeDetectorRef */
-    setInterval(() => {
+    /* setInterval(() => {
       this.changeDetector.detectChanges();
-    }, 5000);
+    }, 5000); */
   }
 }
