@@ -1,6 +1,9 @@
 <h1>
-    First Signals: {{ fristSignals() }}
+    First Signals: {{ firstSignal() }}
 </h1>
 <h1>
-    Second Signals: {{ secondSignals() }}
+    Second Signals: {{ secondSignal() }}
 </h1>
+
+<button (click)="setSignal()">Set first signal to 10</button>
+<button (click)="updateSignal()">Increment first signal</button>
