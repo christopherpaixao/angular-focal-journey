@@ -6,9 +6,10 @@ import { TwoWayDataBinding } from './modules/two-way-data-binding/two-way-data-b
 import { InputOutputProperties } from './modules/input-property/input-property';
 import { StateManagement } from './modules/modern-angular-21/state-management/state-management';
 import { WriteableSignals } from './modules/modern-angular-21/signals/writeable-signals/writeable-signals';
+import { ComputedSignals } from './modules/modern-angular-21/signals/computed-signals/computed-signals';
 
 export const routes: Routes = [
-  { path: '', component: WriteableSignals },
+  { path: '', component: ComputedSignals },
   { path: 'data-binding', component: DataBinding },
   { path: 'class-style-binding', component: ClassStyleBinding },
   { path: 'event-binding', component: EventBinding },

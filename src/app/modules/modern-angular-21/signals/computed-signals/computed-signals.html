@@ -1,0 +1,24 @@
+<h1>
+    {{ firstNumber() }}
+</h1>
+<h1>
+    {{ secondNumber() }}
+</h1>
+<hr />
+<h2>
+    {{ sum() }}
+</h2>
+
+<hr />
+
+<button (click)="setSecondSignalTo10()">
+    Set Second Signal to 10
+</button>
+
+<button (click)="incrementFirstSignal()">
+    Increment First Signal
+</button>
+
+<button (click)="incrementBothSignals()">
+    Increment Both Signals
+</button>
