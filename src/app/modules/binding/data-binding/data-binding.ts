@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { InputOutputProperties } from '../input-property/input-property';
-import { OutputProperty } from '../output-property/output-property';
+import { InputOutputProperties } from '../../property-decorators/input-property/input-property';
+import { OutputProperty } from '../../property-decorators/output-property/output-property';
 
 @Component({
   selector: 'app-data-binding',
